@@ -22,7 +22,32 @@
             <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
           </ul>
         </div>
-        
+        <div class="col-md-4">
+          <div>
+            <p>
+              <span class="badge badge-primary">{{profile.followers}} Followers</span>
+              <span class="badge badge-info">{{profile.following}} Following</span>
+              <span class="badge badge-secondary">{{profile.public_gists}} Public Gists</span>
+              <span class="badge badge-success">{{profile.public_repos}} Public Repos</span>
+            </p>
+            <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-sm btn-primary">View Profile in Githhub</a>
+            </p>
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Repositories</h3>
+              </div>
+              <div class="card-body" *ngFor="let repo of repos">
+                <p class="clearfix">
+                  {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-info float-right">View the project
+                    in github.</a>
+                </p>
+                <p>
+                  {{repo.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
