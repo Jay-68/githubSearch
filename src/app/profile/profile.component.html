@@ -1,9 +1,12 @@
-<div *ngIf='profile'>
-  <div class="panel panel-default">
+<!-- panel to card or sth -->
+<div *ngIf='profile' class="pt-3">
+  <div class="container">
     <div class="panel-heading">
       <p>
-        {{profile.name}} <small>({{profile.login}})</small> <span *ngIf="profile.company">, Works at
-          {{profile.company}}</span>
+        <strong>User Name: </strong>{{profile.name}} <small>({{profile.login}}). </small> <span
+          *ngIf="profile.company">, Works at
+          {{profile.company}}</span> <strong> Location: </strong> <span
+          *ngIf="profile.location">{{profile.location}}</span>
       </p>
     </div>
     <div class="panel-body">
@@ -11,14 +14,15 @@
         <div class="col-md-4">
           <img src="{{profile.avatar_url}}" alt="User profile picture" class="img-rounded img-responsive">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul class="list-group">
             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
             <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
-            <li class="list-group-item" *ngIf="profile.email"> <a href="{{profile.email}}">{{profile.email}}</a>
-            </li>
+            <!-- a link for email -->
+            <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
           </ul>
         </div>
+        
       </div>
     </div>
   </div>
