@@ -24,5 +24,10 @@ export class GithubSearchService {
     // tslint:disable-next-line: max-line-length
     return this.serviceHttp.get('https://api.github.com/users/' + this.username + "/repos?client_id=" + this.clientId + "&client_secret" + this.clientSecret);
   }
+
+  updateProfile(username: string) {
+    this.username = username;
+  }
+
 }
 

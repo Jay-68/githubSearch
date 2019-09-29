@@ -9,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
   profile: any[];
   repos: any[];
+  username: string;
 
   constructor(private githubSearchService: GithubSearchService) {
+
+  }
+
+  findProfile() {
+    this.githubSearchService.updateProfile(this.username);
+
     this.githubSearchService.profileData().subscribe(profile => {
       console.log(profile);
       this.profile = profile;

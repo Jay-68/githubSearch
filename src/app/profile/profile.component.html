@@ -1,3 +1,8 @@
+<form action="" class="row pt-4">
+  <div class="form-group col-md-4">
+    <input type="text" class="form-control" placeholder="Search github Profiles" [(ngModel)]="username" (keyup)="findProfile()">
+  </div>
+</form>
 <!-- panel to card or sth -->
 <div *ngIf='profile' class="pt-3">
     <div class="panel-heading">
