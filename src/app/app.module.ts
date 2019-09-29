@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchProfileComponent } from './search-profile/search-profile.component';
+import { GithubSearchService } from './github-search.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { SearchProfileComponent } from './search-profile/search-profile.componen
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GithubSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

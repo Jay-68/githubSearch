@@ -1,3 +1,4 @@
+import { GithubSearchService } from './../github-search.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private githubSearchService: GithubSearchService) {
+    this.githubSearchService.profileData().subscribe(profile => {
+      console.log(profile);
+    });
+  }
 
   ngOnInit() {
   }

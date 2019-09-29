@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +11,14 @@ export class GithubSearchService {
   private clientId = 'a2aa3c7096e2d3662fea';
   private clientSecret = 'fd627ea04ab35116458ddc02c5c9b4b87fa1b605';
 
-  constructor(private _http: Http) {
+  constructor(private serviceHttp: HttpClient) {
     console.log('service is now ready');
+    this.username = 'Jay-68';
+  }
+  profileData() {
+    // tslint:disable-next-line: max-line-length
+    return this.serviceHttp.get('https://api.github.com/users/' + this.username + "?client_id=" + this.clientId + "&client_secret" + this.clientSecret);
+
   }
 }
+
