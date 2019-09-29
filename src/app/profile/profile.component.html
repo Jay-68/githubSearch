@@ -1,1 +1,25 @@
-<p>profile works!</p>
+<div *ngIf='profile'>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <p>
+        {{profile.name}} <small>({{profile.login}})</small> <span *ngIf="profile.company">, Works at
+          {{profile.company}}</span>
+      </p>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{profile.avatar_url}}" alt="User profile picture" class="img-rounded img-responsive">
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+            <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+            <li class="list-group-item" *ngIf="profile.email"> <a href="{{profile.email}}">{{profile.email}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
