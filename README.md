@@ -1,6 +1,10 @@
 # GithubSearch
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+=======
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+>>>>>>> 76f1fa5b2f888cb95e6a4ab9901173944e4059fc
 
 ## Development server
 
