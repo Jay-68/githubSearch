@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchProfileComponent } from './search-profile/search-profile.component';
 import { GithubSearchService } from './github-search.service';
+import { ReposComponent } from './repos/repos.component';
+import { RoutingComponent } from './routing/routing.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchProfileComponent
+    SearchProfileComponent,
+    ReposComponent,
+    RoutingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
