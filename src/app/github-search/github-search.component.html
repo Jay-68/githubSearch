@@ -1,11 +1,11 @@
 <div class="container pb-5">
   <div class="row card card-block">
     <div class="form-group col-md-6 mx-auto">
-      <input type="text" class="form-control mb-5" name="username" placeholder="Search github profile"
-        [(ngModel)]="username" (keyup)="getProfiles($event)" size="6">
-      <button class='btn btn-primary' id="profile" type="button" (click)="getProfiles(0)">User Profile</button>
-      <a routerLink='/repos' routerLinkActive='active'><button class='btn btn-primary' id="repos" type="button"
-          (click)="getRepositories()">See Repositories</button></a>
+      <input type="text" class="form-control" name="username" placeholder="Search github profile" [(ngModel)]="username"
+        (keyup)="getProfiles($event)" size="6">
+      <a routerLink='/repos' routerLinkActive='active'>
+        <button class='btn btn-primary' id="repos" type="button" (click)="getRepositories()">See
+          Repositories</button></a>
     </div>
   </div>
   <div class="row profile mt-5">
@@ -17,7 +17,9 @@
       <div class="profile-info">
         <p class="card card-title" id="git-name" *ngIf="username" appBackgroundColor>Github Name: {{users.login}}</p>
         <p class="card card-title">Email address: {{users.email}}</p>
+        <p class="card card-title">Location: {{users.location}}</p>
         <p class="card card-title">Repositories: {{users.public_repos}}</p>
+        <p class="card card-title">Bio: {{users.bio}}</p>
         <p class="card card-title" *ngIf="Hireable">Available for hire.</p>
         <p class="card card-title">Followers: {{users.followers}}</p>
         <p class="card card-title">Following: {{users.following}}</p>

@@ -1,6 +1,3 @@
-.container{
-  background-color: #8d80fc;
-}
 .image{
   width:250px;
   height: 250px;
@@ -8,6 +5,13 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 25%;
+}
+.image img{
+  width:250px;
+  height: 250px;
+}
+.row{
+  margin-bottom: 3rem;
 }
 .profile-info{
   text-decoration: none;
@@ -25,30 +29,17 @@ input{
 }
 #repos{
   float: right;
-  margin-right: 5%;
+  margin-right: 40%;
 }
 #profile{
   margin-left: 5%;
-}
-.card-block{
-  background-image: url('/assets/images/infinite.jpeg');
-  background-position: center;
-}
-.card-title{
-  padding: 0.3rem;
 }
 #name-title{
   text-align: center;
   font-size: 2rem;
 }
-#intro{
-  color: #d8e3e3;
-  text-align: center;
-  font-size: 1.5rem;
-}
 #git-name{
-  color: #d8e3e3;
-  text-transform: uppercase;
+  color: #000000;
 }
 @media screen and (max-width: 900px) {
   .col-md-1{
