@@ -21,7 +21,6 @@
             <th>Project Name</th>
             <th>Description</th>
             <th>Language</th>
-            <th *ngIf="fork">Forked</th>
             <th>Github Url</th>
           </tr>
         </thead>
@@ -30,7 +29,6 @@
             <td>{{repository.name}}</td>
             <td>{{repository.description}}</td>
             <td>{{repository.language}}</td>
-            <td *ngIf="fork">{{repository.fork}}</td>
             <td><a href="{{repository.html_url}}" target="_blank" id="repo-link">View on Github</a></td>
           </tr>
         </tbody>
