@@ -1,30 +1,28 @@
-<div class="container">
+<div class="container pb-5">
   <div class="row card card-block">
-    <div class="form-group">
-      <input type="text" class="form-control mb-5" name="username" placeholder="Enter Github user name"
+    <div class="form-group col-md-6 mx-auto">
+      <input type="text" class="form-control mb-5" name="username" placeholder="Search github profile"
         [(ngModel)]="username" (keyup)="getProfiles($event)" size="6">
       <button class='btn btn-primary' id="profile" type="button" (click)="getProfiles(0)">User Profile</button>
       <a routerLink='/repos' routerLinkActive='active'><button class='btn btn-primary' id="repos" type="button"
           (click)="getRepositories()">See Repositories</button></a>
     </div>
   </div>
-  <div class="row profile">
+  <div class="row profile mt-5">
     <div class="col-md-5">
       <p id="name-title">{{users.name}}</p>
-      <div class="image"><img src="{{users.avatar_url}}" alt="User profile image"></div>
+      <div class="image"><img src="{{users.avatar_url}}"></div>
     </div>
     <div class="col-md-6">
       <div class="profile-info">
         <p class="card card-title" id="git-name" *ngIf="username" appBackgroundColor>Github Name: {{users.login}}</p>
         <p class="card card-title">Email address: {{users.email}}</p>
         <p class="card card-title">Repositories: {{users.public_repos}}</p>
-        <p class="card card-title">Hireable: {{users.hireable}}</p>
+        <p class="card card-title" *ngIf="Hireable">Available for hire.</p>
         <p class="card card-title">Followers: {{users.followers}}</p>
         <p class="card card-title">Following: {{users.following}}</p>
         <p class="card card-title">Last updated: {{users.updated_at|date:'medium'|uppercase}}</p>
       </div>
     </div>
   </div>
-
-  <!-- <pre>{{repositories | json}}</pre> -->
 </div>

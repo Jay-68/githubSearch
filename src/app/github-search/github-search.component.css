@@ -1,21 +1,13 @@
-.comntainer-fluid{
-  font-size: 1.5rem;
-  margin-top: 2rem;
+.container{
+  background-color: #8d80fc;
 }
 .image{
   width:250px;
   height: 250px;
-  background-image: url('/assets/images/avatar.svg');
+  background-image: url('/assets/images/githubIcon.svg');
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 25%;
-}
-.image img{
-  width:250px;
-  height: 250px;
-}
-.row{
-  margin-bottom: 3rem;
 }
 .profile-info{
   text-decoration: none;
