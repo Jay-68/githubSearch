@@ -8,8 +8,8 @@ import { map } from 'rxjs/operators';
 export class GithubSearchService {
 
   private username: string;
-  private clientId = 'a2aa3c7096e2d3662fea';
-  private clientSecret = 'fd627ea04ab35116458ddc02c5c9b4b87fa1b605';
+  // private clientId = 'a2aa3c7096e2d3662fea';
+  // private clientSecret = 'fd627ea04ab35116458ddc02c5c9b4b87fa1b605';
 
   constructor(private serviceHttp: HttpClient) {
     console.log('service is now ready');
