@@ -1,58 +1,48 @@
-input {
-  padding: 1.5rem;
+input{
+  padding:1.5rem;
   margin-right: 15%;
   margin-left: 15%;
   width: 70%;
   margin-top: 1rem;
 }
-
-#repo-link {
+#repo-link{
   text-decoration: underline;
-  text-decoration-color: blue;
+  text-decoration-color:blue;
   color: blue;
 }
-
-#repo-title {
+#repo-title{
   margin-left: 40%;
 }
-
-.table {
-  padding: 2rem;
+.table{
+  padding: 2rem; 
   margin-left: 10%;
   margin-right: 10%;
-  width: 80%;
+  width: 80%; 
   color: black;
 }
-
-th {
+th{
   font-size: 1.3rem;
 }
-
-td {
+td{
   font-family: 'Patrick Hand', cursive;
   font-size: 1.5rem;
 }
-
-.card-block {
+.card-block{
   background-image: url('/assets/images/infinite.jpeg');
   background-position: center;
 }
-
-#repos {
+#repos{
   float: right;
   margin-right: 5%;
 }
-
-#home {
+#home{
   margin-left: 5%;
 }
-
-#intro {
+#intro{
   color: #d8e3e3;
   text-align: center;
   font-size: 1.5rem;
 }
-
-.row {
+.row{
   margin-bottom: 3rem;
 }

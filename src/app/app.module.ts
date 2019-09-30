@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { UsersService } from './users.service';
+import {UsersService} from './display-profile/users.service';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubSearchComponent } from '../app/search-profile/search-profile.component';
+import { GithubSearchComponent } from './github-search/github-search.component';
 import { SearchComponent } from './search/search.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReposComponent } from './repos/repos.component';
-// import { BackgroundColorDirective } from './background-color.directive';
+import { BackgroundColorDirective } from './background-color.directive';
 import { ReverseDatePipe } from './reverse-date.pipe';
-import { RoutingModule } from './routing/routing.module';
+import {RoutingModule} from './routing/routing.module'
 
 
 @NgModule({
@@ -21,11 +21,11 @@ import { RoutingModule } from './routing/routing.module';
     GithubSearchComponent,
     SearchComponent,
     ReposComponent,
-    // BackgroundColorDirective,
+    BackgroundColorDirective,
     ReverseDatePipe,
-
-  ],
-
+         
+  ], 
+  
   imports: [
     BrowserModule,
     HttpClientModule,

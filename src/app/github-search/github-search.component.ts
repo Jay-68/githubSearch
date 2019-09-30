@@ -6,13 +6,14 @@ import {Profiles} from '../profiles';
 
 
 @Component({
-  selector: 'app-repos',
-  templateUrl: './repos.component.html',
+  selector: 'app-github-search',
+  templateUrl: './github-search.component.html',
   providers: [UsersService],
-  styleUrls: ['./repos.component.css']
+  styleUrls: ['./github-search.component.css']
 })
-export class ReposComponent implements OnInit {
-
+export class GithubSearchComponent implements OnInit {
+  
+  
   username: string = "";
   repositories: Repositories[];
   profiles: Profiles[];

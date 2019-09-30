@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../users.service';
-import { Repositories } from '../repositories';
+import {UsersService} from '../display-profile/users.service'
+import {Repositories} from '../repositories'
 
 @Component({
   selector: 'app-search',
@@ -8,7 +8,7 @@ import { Repositories } from '../repositories';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  
 
   constructor() { }
 

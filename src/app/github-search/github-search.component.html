@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  
+  <div class="row card card-block">
+      <div class="form-group">
+      
+        <input type="text" class="form-control" name="username" placeholder="Enter Github user name" [(ngModel)]="username" (keyup)="getProfiles($event)" size="6">
+        <p id="intro">Find the greatest minds & the most spectacular works done, here.</p>
+        <button class='btn btn-primary' id="profile" type="button" (click)="getProfiles(0)">User Profile</button><a href="https://github.com/" target="_blank"><button class="btn btn-primary">Create Github Account</button></a><a routerLink='/repos' routerLinkActive='active'><button class='btn btn-primary' id="repos" type="button" (click)="getRepositories()">See Repositories</button></a>
+        
+      </div>
+  </div>
+      
+   <!-- <div *ngIf="loading"> loading </div>
+
+  <div *ngIf="errorMessage" class="alert alert-warning"><strong>Warning!</strong>{{errorMessage}}</div> -->
+
+  <div class="row profile">   
+    <div class="col-md-5">
+      <p id="name-title">{{users.name}}</p>
+      <div class="image"><img src="{{users.avatar_url}}" alt=""></div>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-6">
+        <div class="profile-info">
+            
+          <p class="card card-title" id="git-name" *ngIf="username" appBackgroundColor>Github Name: {{users.login}}</p>
+          <p class="card card-title">Email address: {{users.email}}</p>
+          <p class="card card-title">Repositories: {{users.public_repos}}</p>
+          <p class="card card-title">Hireable: {{users.hireable}}</p>
+          <p class="card card-title">Followers: {{users.followers}}</p>
+          <p class="card card-title">Following: {{users.following}}</p>
+          <p class="card card-title">Last updated: {{users.updated_at|date:'medium'|uppercase}}</p>
+            
+        </div>
+    </div>     
+          
+  </div>
+
+  <!-- <pre>{{repositories | json}}</pre> -->
+</div>
+
+
+
+

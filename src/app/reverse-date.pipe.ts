@@ -5,14 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ReverseDatePipe implements PipeTransform {
 
-  // tslint:disable-next-line: variable-name
   transform(updated_at: string): string {
-    // tslint:disable-next-line: no-inferrable-types
-    let newStr: string = '';
-    for (let i = updated_at.length - 1; i >= 0; i--) {
+    let newStr: string = "";
+    for (var i = updated_at.length - 1; i>=0; i--){
       newStr += updated_at.charAt(i);
     }
-
+    
     return null;
   }
 
