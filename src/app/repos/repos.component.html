@@ -1,1 +1,42 @@
-<p>repos works!</p>
+<div class="container-fluid">
+
+  <div class="row card card-block">
+    <div class="form-group">
+
+      <input type="text" class="form-control" name="username" placeholder="Enter Github user name"
+        [(ngModel)]="username" (keyup)="getProfiles($event)" size="6">
+      <p id="intro">Find the greatest minds & the most spectacular works done, here.</p>
+      <a routerLink='/github-search' routerLinkActive='active'><button class='btn btn-primary' id="home"
+          type="button">Home</button></a><a href="https://github.com/" target="_blank"><button
+          class="btn btn-primary">Create Github Account</button></a><button class='btn btn-primary' id="repos"
+        type="button" (click)="getRepositories()">See Repositories</button>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <h3 id="repo-title">REPOSITORY INFO</h3>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead class="black white-text">
+          <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Forked</th>
+            <th>Github Url</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let repository of repositories">
+            <td>{{repository.name}}</td>
+            <td>{{repository.description}}</td>
+            <td>{{repository.language}}</td>
+            <td>{{repository.fork}}</td>
+            <td><a href="{{repository.html_url}}" target="_blank" id="repo-link">View on Github</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

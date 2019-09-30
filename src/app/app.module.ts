@@ -1,33 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersService } from './users.service';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SearchProfileComponent } from './search-profile/search-profile.component';
-import { GithubSearchService } from './github-search.service';
-import { ReposComponent } from './repos/repos.component';
-import { RoutingComponent } from './routing/routing.component';
+import { GithubSearchComponent } from '../app/search-profile/search-profile.component';
 import { SearchComponent } from './search/search.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ReposComponent } from './repos/repos.component';
+// import { BackgroundColorDirective } from './background-color.directive';
+import { ReverseDatePipe } from './reverse-date.pipe';
+import { RoutingModule } from './routing/routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
-    SearchProfileComponent,
+    GithubSearchComponent,
+    SearchComponent,
     ReposComponent,
-    RoutingComponent,
-    SearchComponent
+    // BackgroundColorDirective,
+    ReverseDatePipe,
+
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    AppRoutingModule,
+    FormsModule,
+    RoutingModule,
   ],
-  providers: [GithubSearchService],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

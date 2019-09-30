@@ -1,4 +1,4 @@
-import { GithubSearchService } from './../github-search.service';
+import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,20 +11,19 @@ export class ProfileComponent implements OnInit {
   repos: any[];
   username: string;
 
-  constructor(private githubSearchService: GithubSearchService) {
+  // tslint:disable-next-line: no-shadowed-variable
+  constructor(private UsersService: UsersService) {
 
   }
 
   findProfile() {
-    this.githubSearchService.updateProfile(this.username);
+    this.UsersService.updateProfile(this.username);
 
-    this.githubSearchService.profileData().subscribe(profile => {
-      console.log(profile);
+    this.UsersService.profileData().subscribe((profile) => {
       this.profile = profile;
     });
 
-    this.githubSearchService.profileRepos().subscribe(repos => {
-      console.log(repos);
+    this.UsersService.profileRepos().subscribe((repos) => {
       this.repos = repos;
     });
   }
