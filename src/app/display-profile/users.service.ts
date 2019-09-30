@@ -17,7 +17,6 @@ export class UsersService {
 
   constructor(private http: HttpClient) {
     console.log('service is now ready!');
-    // this.username = 'AisaJ';
   }
 
   getRepositories(username: string): Observable<Repositories[]> {
